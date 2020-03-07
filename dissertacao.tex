@@ -1,0 +1,228 @@
+\documentclass[12pt,a4paper]{report}
+
+\usepackage[top=3cm, bottom=2cm, left=3cm, right=2cm,a4paper]{geometry}
+\usepackage{setspace}
+
+%\singlespacing
+\onehalfspacing 
+%\doublespacing
+
+                                 
+\usepackage{indentfirst}
+\setlength{\parindent}{1.3cm}
+\usepackage[brazilian]{babel}
+\usepackage{graphicx,psfrag}
+\usepackage[T1]{fontenc}
+\usepackage{times, amsmath, amsfonts, amssymb, amsthm}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\hypersetup{colorlinks, citecolor=blue, linkcolor=black, urlcolor=black} 
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{shapes,backgrounds}
+\usepackage{xfrac}
+
+\newtheorem{teorema}{Teorema}[chapter]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{corolario}[teorema]{Corolário}
+\newtheorem{proposicao}[teorema]{Proposi\c{c}\~ao}
+\newtheorem{definicao}[teorema]{Defini\c{c}\~ao}
+\theoremstyle{definition}
+\newtheorem{exemplo}{Exemplo}
+\newtheorem*{obs}{Observação}
+
+
+\addto\captionsbrazil{\renewcommand{\contentsname}{}}
+\addto\captionsbrazil{\renewcommand{\listfigurename}{}}
+\addto\captionsbrazil{\renewcommand{\listtablename}{}}
+\addto\captionsbrazil{\renewcommand{\bibname}{}}
+
+\begin{document}
+
+%CAPA
+\thispagestyle{empty}
+\begin{center}
+\includegraphics[width=14.8cm]{UELmoderno.png}
+{\color{green!45!black} \rule{\columnwidth}{1.5mm}}
+\vspace{.7cm}
+{\Large \uppercase{Antonio Francisco Junior }}
+\vspace{1.0cm}
+{\large \uppercase{ DISSERTAÇÃO  DE MESTRADO }}
+\vspace{5.0cm}
+\LARGE \textbf{Titulo da dissertação} 
+\normalsize
+\vspace{6.0cm}
+{\color{green!45!black} \rule{\columnwidth}{1.5mm}}
+Londrina \\ 2020
+\end{center}
+
+% Segunda Página
+\newpage
+\thispagestyle{empty}
+\begin{center}
+{\Large \uppercase{ Antonio Francisco Junior }}
+\vspace{6cm}
+\Large \textbf{Titulo da Dissertação}       
+\normalsize
+\vspace{3cm}
+\end{center}
+\noindent \hspace{7.cm} 
+\begin{minipage}{8.5cm}{
+\begin{singlespace} 
+Dissertação de mestrado apresentada ao Departamento de Física da Universidade Estadual de Londrina, como requisito parcial para a obtenção do título de Mestre em Física.
+\end{singlespace}
+Orientador: \parbox[t]{6.0cm}{Prof. Dr. Pietro Chimenti}}
+\end{minipage}
+\vspace{5cm}
+\begin{center}
+Londrina\\
+2020
+\end{center}
+
+% Terceira Página
+\newpage
+\thispagestyle{empty}
+\begin{center}
+{\large \uppercase{ Antonio Francisco Junior }}
+\vspace{2cm}
+\Large \textbf{Titulo da dissertação} 
+\normalsize
+\vspace{2cm}
+\end{center}
+\noindent \hspace{7.cm} 
+\begin{minipage}{8.5cm}{
+\begin{singlespace} Dissertação de mestrado apresentada ao Departamento de Física da Universidade Estadual de Londrina, como requisito parcial para a obtenção do título de Mestre em Física.
+\end{singlespace}}
+\vspace{1.5cm}
+\hspace{1.5cm} {\uppercase{ \bf Banca Examinadora}}
+\vspace{1cm}
+\begin{center}
+\begin{singlespace}
+\underline{\hspace{7cm}} \\
+Prof. Dr. Pietro Chimenti - Orientador\\
+Universidade Estadual de Londrina - UEL
+\vspace{1cm}
+\underline{\hspace{7cm}} \\
+Nome 1 \\
+Universidae 1.
+\vspace{1cm}
+\underline{\hspace{7cm}} \\
+Nome 2 \\
+Universidade 2.
+\end{singlespace}
+\vspace{2cm}
+Londrina, 20 de Fevereiro de 2020.
+\end{center}
+\end{minipage}
+
+% Quarta Página
+\newpage
+\thispagestyle{empty}
+\vspace*{19cm}
+\noindent \hspace{7.cm} 
+\begin{minipage}{8.5cm}
+\textit{dedicação}
+\end{minipage}
+
+
+% Quinta Página
+\newpage
+\thispagestyle{empty}
+\begin{center}
+{\bf AGRADECIMENTOS}
+\end{center}
+\vspace{1cm}
+Agradecimentos....
+
+% Epigrafe (Opcional)
+% Se quiser incluir epigrafe, descomente as linhas abaixo.
+\newpage
+\thispagestyle{empty}
+\vspace*{16cm}
+\noindent \hspace{7.cm} 
+\begin{minipage}{8.cm}
+\textit{"epígrafe" 
+}
+\end{minipage}
+
+% RESUMO
+\newpage
+\thispagestyle{empty}
+\begin{singlespace}
+ \noindent \uppercase{Francisco Jr}, Antonio. {\bf Titulo da Dissertação -- Universidade Estadual de Londrina, Londrina, 2020.}
+\vspace{1pc}
+\begin{center}
+\uppercase{\bf RESUMO}
+\end{center}
+\vspace{1pc}
+\noindent resumo...
+\vspace{2pc}
+\noindent {\bf Palavras-chave:} Detector de Neutrinos. Usinas Nucleares. Simulação de Eventos. Experimento Neutrinos Angra.
+\end{singlespace}
+
+% ABSTRACT
+\newpage
+\thispagestyle{empty}
+\begin{singlespace}
+\noindent \uppercase{Francisco Jr}, Antonio. {\bf Titulo da Dissertação-- Universidade Estadual de Londrina, Londrina, 2020.}
+\vspace{1pc}
+\begin{center}
+\uppercase{\bf ABSTRACT}
+\end{center}
+\vspace{1pc}
+\noindent resumo em ingles
+\vspace{2pc}
+\noindent {\bf Keywords:} Neutrino detector. Nuclear power plants. Event simulation. Neutrinos Angra Experiment.
+\end{singlespace}
+
+% Criação dos índices.
+\begingroup
+\let\clearpage\relax
+\newpage
+\begin{center}
+\MakeUppercase{\bf Sumário}
+\end{center}
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+\begin{center}
+\MakeUppercase{\bf Lista de Figuras}
+\end{center}
+\listoffigures
+\thispagestyle{empty}
+\newpage
+\begin{center}
+\MakeUppercase{\bf Lista de Tabelas}
+\end{center}
+\listoftables
+\thispagestyle{empty}
+\endgroup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%     AQUI COMEÇA O CONTEÚDO DA DISSERTAÇÃO          %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\input{Introducao}
+\input{Cap1}
+\input{Cap2}
+\input{Conclusoes}
+
+\appendix
+%\Apendice A
+\chapter{Titulo do Apendice}\label{apendice}
+
+% Estilo Referencias
+\newpage
+\begingroup
+\let\clearpage\relax
+\begin{center}
+ \MakeUppercase{\bf Referências}
+\end{center}
+\addcontentsline{toc}{chapter}{Referências} 
+
+\bibliographystyle{acm}
+\bibliography{references} 
+\endgroup
+\end{document}
